@@ -19,11 +19,18 @@ const routes = [{
     component: layout,
     redirect: '/HomePage',
     children: [{
-        path: '/HomePage',
-        component: () =>
-            import ('@/views/HomePage'),
-        name: 'HomePage',
-    }]
+            path: '/HomePage',
+            component: () =>
+                import ('@/views/HomePage'),
+            name: 'HomePage',
+        },
+        {
+            path: '/ApplicationForm',
+            component: () =>
+                import ('@/views/ApplicationForm'),
+            name: 'ApplicationForm',
+        }
+    ]
 }, ]
 
 const router = new VueRouter({

@@ -1,22 +1,22 @@
 <!--
  * @Author: lucas-se 1320467676@qq.com
- * @Date: 2022-10-15 20:46:36
+ * @Date: 2022-10-15 21:14:07
  * @LastEditors: lucas-se 1320467676@qq.com
- * @LastEditTime: 2022-10-15 21:19:04
- * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/HomePage.vue
- * @Description: 
+ * @LastEditTime: 2022-10-15 21:20:02
+ * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/ApplicationForm.vue
+ * @Description: 这里是成果申请书模块
  * 
  * Copyright (c) 2022 by lucas-se 1320467676@qq.com, All Rights Reserved. 
 -->
 <template>
-  <div class="content">这里是首页</div>
+  <div class="content">这里是成果申请书模块</div>
 </template>
 
 <script>
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 
 export default {
-  name: 'HomePage',
+  name: 'ApplicationForm',
   components: {},
   // 定义属性
   data() {
