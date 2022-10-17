@@ -34,7 +34,7 @@ export default {
   components: {},
   // 定义属性
   data() {
-    return {}
+    return {};
   },
   props: {
     title: {
@@ -44,7 +44,7 @@ export default {
     menu: {
       type: Array,
       default: function () {
-        return ['这里是菜单一', '这里是菜单一']
+        return ['这里是菜单一', '这里是菜单一'];
       },
     },
   },
@@ -65,7 +65,7 @@ export default {
   beforeDestroy() {}, // 生命周期 - 销毁之前
   destroyed() {}, // 生命周期 - 销毁完成
   activated() {}, // 如果页面有keep-alive缓存功能，这个函数会触发
-}
+};
 </script>
 
 <style lang="scss" scoped>

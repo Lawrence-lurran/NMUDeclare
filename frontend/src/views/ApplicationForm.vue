@@ -9,7 +9,10 @@
  * Copyright (c) 2022 by lucas-se 1320467676@qq.com, All Rights Reserved. 
 -->
 <template>
-  <div class="content">这里是成果申请书模块</div>
+  <div class="content">
+    <MenuList :title="title" :menu="menu"> hello world </MenuList>
+    <!-- <div style="float: right; width: 200px; height: 200px; background: red"></div> -->
+  </div>
 </template>
 
 <script>
@@ -20,7 +23,10 @@ export default {
   components: {},
   // 定义属性
   data() {
-    return {}
+    return {
+      title: '成果申请书',
+      menu: ['成果获奖情况', '解决的关键问题', '方法与措施', '成果特色', '成果推广应用', '完成人'],
+    };
   },
   // 计算属性，会监听依赖属性值随之变化
   computed: {},
@@ -39,12 +45,15 @@ export default {
   beforeDestroy() {}, // 生命周期 - 销毁之前
   destroyed() {}, // 生命周期 - 销毁完成
   activated() {}, // 如果页面有keep-alive缓存功能，这个函数会触发
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .content {
-  width: 100%;
-  height: 200px;
+  // width: 100%;
+  // height: 200px;
+  width: 1000px;
+  min-height: 300px;
+  margin: 0 auto;
 }
 </style>
