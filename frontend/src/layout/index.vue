@@ -2,7 +2,7 @@
  * @Author: lucas-se 1320467676@qq.com
  * @Date: 2022-07-19 14:57:56
  * @LastEditors: lucas-se 1320467676@qq.com
- * @LastEditTime: 2022-10-15 21:22:43
+ * @LastEditTime: 2022-10-16 23:17:18
  * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/layout/index.vue
  * @Description: 
  * 
@@ -49,7 +49,7 @@
           <li>
             <a href="http://aqjxcg.xupt.edu.cn/cgzjbg.htm">成果总结报告</a>
           </li>
-          <li><a href="http://aqjxcg.xupt.edu.cn/cgjd.htm">成果鉴定</a></li>
+          <li @click="pushRouter('AchievementsAppraisal')">成果鉴定</li>
           <li>
             <a href="http://aqjxcg.xupt.edu.cn/dyyd/bwcx_ljsm.htm">德育园地</a>
             <ul class="second-nav">

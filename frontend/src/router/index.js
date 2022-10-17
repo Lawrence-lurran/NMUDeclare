@@ -29,6 +29,12 @@ const routes = [{
             component: () =>
                 import ('@/views/ApplicationForm'),
             name: 'ApplicationForm',
+        },
+        {
+            path: '/AchievementsAppraisal',
+            component: () =>
+                import ('@/views/AchievementsAppraisal'),
+            name: 'AchievementsAppraisal',
         }
     ]
 }, ]
