@@ -13,8 +13,7 @@
     <div class="content">
       <el-container>
         <el-aside width="280px">
-          <MenuList :title="title" :menu="menu" @changePath="changePath">
-          </MenuList>
+          <MenuList :title="title" :menu="menu" @changePath="changePath"> </MenuList>
         </el-aside>
         <el-main>
           <curPosition :path="path" />
@@ -30,7 +29,7 @@
 
 export default {
   name: 'ApplicationForm',
-  components: {},
+  // components: {},
   // 定义属性
   data() {
     return {
@@ -68,7 +67,7 @@ export default {
           showSub: false,
         },
       ],
-    }
+    };
   },
   // 计算属性，会监听依赖属性值随之变化
   computed: {},
@@ -77,8 +76,8 @@ export default {
   // 方法集合
   methods: {
     changePath(path) {
-      this.path = path
-      console.log(path)
+      this.path = path;
+      console.log(path);
     },
   },
   // 生命周期 - 创建完成（可以访问当前this实例）
@@ -92,7 +91,7 @@ export default {
   beforeDestroy() {}, // 生命周期 - 销毁之前
   destroyed() {}, // 生命周期 - 销毁完成
   activated() {}, // 如果页面有keep-alive缓存功能，这个函数会触发
-}
+};
 </script>
 
 <style lang="scss" scoped>
