@@ -13,11 +13,20 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+//导入ElementUI
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
+//使用ElementUI
+Vue.use(ElementUI);
 // 引入
 import MenuList from '@/components/MenuList'
+import curPosition from '@/components/curPosition.vue'
+import MainContent from '@/views/MainContent'
 // 注册为全局组件
 Vue.component('MenuList', MenuList)
+Vue.component('curPosition', curPosition)
+Vue.component('MainContent', MainContent)
 
 Vue.config.productionTip = false
 

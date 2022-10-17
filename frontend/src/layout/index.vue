@@ -2,7 +2,7 @@
  * @Author: lucas-se 1320467676@qq.com
  * @Date: 2022-07-19 14:57:56
  * @LastEditors: lucas-se 1320467676@qq.com
- * @LastEditTime: 2022-10-16 23:17:18
+ * @LastEditTime: 2022-10-17 20:29:15
  * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/layout/index.vue
  * @Description: 
  * 
@@ -46,12 +46,10 @@
               </li>
             </ul>
           </li>
-          <li>
-            <a href="http://aqjxcg.xupt.edu.cn/cgzjbg.htm">成果总结报告</a>
-          </li>
+          <li @click="pushRouter('SummaryReport')">成果总结报告</li>
           <li @click="pushRouter('AchievementsAppraisal')">成果鉴定</li>
-          <li>
-            <a href="http://aqjxcg.xupt.edu.cn/dyyd/bwcx_ljsm.htm">德育园地</a>
+          <li @click="pushRouter('MoralEducation')">
+            德育园地
             <ul class="second-nav">
               <li>
                 <a href="http://aqjxcg.xupt.edu.cn/dyyd/bwcx_ljsm.htm"
@@ -80,8 +78,8 @@
               </li>
             </ul>
           </li>
-          <li>
-            <a href="http://aqjxcg.xupt.edu.cn/cxhd1/xkjs.htm">创新活动</a>
+          <li @click="pushRouter('InnovationActivities')">
+            创新活动
             <ul class="second-nav">
               <li>
                 <a href="http://aqjxcg.xupt.edu.cn/cxhd1/xkjs.htm">学科竞赛</a>
@@ -109,8 +107,8 @@
               </li>
             </ul>
           </li>
-          <li>
-            <a href="http://aqjxcg.xupt.edu.cn/jxzy/szjs/szzc.htm">教学资源</a>
+          <li @click="pushRouter('TeachingResources')">
+            教学资源
             <ul class="second-nav">
               <li>
                 <a href="http://aqjxcg.xupt.edu.cn/jxzy/szjs/szzc.htm"
@@ -197,8 +195,8 @@
               </li>
             </ul>
           </li>
-          <li>
-            <a href="http://aqjxcg.xupt.edu.cn/pycx/jyqk.htm">培养成效</a>
+          <li @click="pushRouter('DevelopEffective')">
+            培养成效
             <ul class="second-nav">
               <li>
                 <a href="http://aqjxcg.xupt.edu.cn/pycx/jyqk.htm">招生就业</a>
@@ -240,7 +238,9 @@ export default {
   components: {},
   // 定义属性
   data() {
-    return {}
+    return {
+      to: 'HomePage',
+    }
   },
   // 计算属性，会监听依赖属性值随之变化
   computed: {},
@@ -249,7 +249,10 @@ export default {
   // 方法集合
   methods: {
     pushRouter(to) {
-      this.$router.push(to)
+      if (this.to !== to) {
+        this.to = to
+        this.$router.push(to)
+      }
     },
   },
   // 生命周期 - 创建完成（可以访问当前this实例）
