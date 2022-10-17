@@ -1,10 +1,10 @@
 <!--
  * @Author: lucas-se 1320467676@qq.com
- * @Date: 2022-10-15 21:14:07
+ * @Date: 2022-10-16 23:12:22
  * @LastEditors: lucas-se 1320467676@qq.com
- * @LastEditTime: 2022-10-17 21:19:46
- * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/ApplicationForm.vue
- * @Description: 这里是成果申请书模块
+ * @LastEditTime: 2022-10-17 21:19:13
+ * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/SummaryReport.vue
+ * @Description: 
  * 
  * Copyright (c) 2022 by lucas-se 1320467676@qq.com, All Rights Reserved. 
 -->
@@ -29,45 +29,14 @@
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 
 export default {
-  name: 'ApplicationForm',
+  name: 'SummaryReport',
   components: {},
   // 定义属性
   data() {
     return {
       title: '成果总结报告',
+      menu: [],
       path: [],
-      menu: [
-        {
-          id: 1,
-          content: '成果获奖情况',
-          showSub: false,
-        },
-        {
-          id: 2,
-          content: '解决的关键问题',
-          showSub: false,
-        },
-        {
-          id: 3,
-          content: '方法与措施',
-          showSub: false,
-        },
-        {
-          id: 4,
-          content: '成果特色',
-          showSub: false,
-        },
-        {
-          id: 5,
-          content: '成果推广应用',
-          showSub: false,
-        },
-        {
-          id: 6,
-          content: '完成人',
-          showSub: false,
-        },
-      ],
     }
   },
   // 计算属性，会监听依赖属性值随之变化

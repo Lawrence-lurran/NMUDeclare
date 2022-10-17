@@ -1,10 +1,10 @@
 <!--
  * @Author: lucas-se 1320467676@qq.com
- * @Date: 2022-10-15 21:14:07
+ * @Date: 2022-10-17 12:45:39
  * @LastEditors: lucas-se 1320467676@qq.com
- * @LastEditTime: 2022-10-17 21:19:46
- * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/ApplicationForm.vue
- * @Description: 这里是成果申请书模块
+ * @LastEditTime: 2022-10-17 21:19:27
+ * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/MoralEducation.vue
+ * @Description: 
  * 
  * Copyright (c) 2022 by lucas-se 1320467676@qq.com, All Rights Reserved. 
 -->
@@ -29,44 +29,23 @@
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 
 export default {
-  name: 'ApplicationForm',
+  name: 'MoralEducation',
   components: {},
   // 定义属性
   data() {
     return {
-      title: '成果总结报告',
+      title: '德育园地',
       path: [],
       menu: [
         {
           id: 1,
-          content: '成果获奖情况',
+          content: '不忘初心，牢记使命',
           showSub: false,
         },
-        {
-          id: 2,
-          content: '解决的关键问题',
-          showSub: false,
-        },
-        {
-          id: 3,
-          content: '方法与措施',
-          showSub: false,
-        },
-        {
-          id: 4,
-          content: '成果特色',
-          showSub: false,
-        },
-        {
-          id: 5,
-          content: '成果推广应用',
-          showSub: false,
-        },
-        {
-          id: 6,
-          content: '完成人',
-          showSub: false,
-        },
+        { id: 2, content: '德育教育课程体系' },
+        { id: 3, content: '网络安全宣传周' },
+        { id: 4, content: '党员工作站' },
+        { id: 5, content: '职业规范教育' },
       ],
     }
   },

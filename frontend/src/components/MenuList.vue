@@ -2,23 +2,29 @@
  * @Author: lucas-se 1320467676@qq.com
  * @Date: 2022-10-16 23:06:43
  * @LastEditors: lucas-se 1320467676@qq.com
- * @LastEditTime: 2022-10-16 23:29:26
+ * @LastEditTime: 2022-10-17 21:14:40
  * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/components/MenuList.vue
  * @Description: 
  * 
  * Copyright (c) 2022 by lucas-se 1320467676@qq.com, All Rights Reserved. 
 -->
 <template>
-  <div>
+  <div class="MenuList">
     <div class="container">
       <div class="title">{{ this.title }}</div>
       <div class="list">
         <ul>
-          <li v-for="item of this.menu" :key="item">
-            <a href="#">
-              {{ item }}
-              <span>-&gt;</span>
-            </a>
+          <li
+            v-for="item of this.menu"
+            :key="item.id"
+            @click="handleClick(item, $event)"
+          >
+            {{ item.content }}
+            <ul class="third-nav" v-if="item.showSub">
+              <li v-for="child of item.children" :key="child.id">
+                {{ child.content }}
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -44,7 +50,21 @@ export default {
     menu: {
       type: Array,
       default: function () {
-        return ['这里是菜单一', '这里是菜单一']
+        return [
+          {
+            id: 1,
+            content: '不忘初心，牢记使命',
+            showSub: false,
+            children: [
+              { id: 1, content: '德育教育课程体系' },
+              { id: 2, content: '网络安全宣传周' },
+            ],
+          },
+          { id: 2, content: '德育教育课程体系', showSub: false },
+          { id: 3, content: '网络安全宣传周', showSub: false },
+          { id: 4, content: '党员工作站', showSub: false },
+          { id: 5, content: '职业规范教育', showSub: false },
+        ]
       },
     },
   },
@@ -53,11 +73,38 @@ export default {
   // 监控data中的数据变化
   watch: {},
   // 方法集合
-  methods: {},
+  methods: {
+    handleClick(item, e) {
+      const path = [this.title, item.content]
+      if (e.currentTarget === e.target) {
+        if (item.children) {
+          console.log('showSub')
+          item.showSub = !item.showSub
+        } else {
+          console.log('click了：' + e.target.innerText)
+          this.$emit('changePath', path)
+        }
+      } else {
+        console.log('click了：' + e.target.innerHTML)
+        path.push(e.target.innerHTML)
+        this.$emit('changePath', path)
+      }
+    },
+  },
   // 生命周期 - 创建完成（可以访问当前this实例）
   created() {},
   // 生命周期 - 挂载完成（可以访问DOM元素）
-  mounted() {},
+  mounted() {
+    const path = [this.title]
+    if (this.menu.length > 0) {
+      path.push(this.menu[0].content)
+      if (this.menu[0].children) {
+        path.push(this.menu[0].children[0].content)
+      }
+    }
+
+    this.$emit('changePath', path)
+  },
   beforeCreate() {}, // 生命周期 - 创建之前
   beforeMount() {}, // 生命周期 - 挂载之前
   beforeUpdate() {}, // 生命周期 - 更新之前
@@ -69,6 +116,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.MenuList {
+  width: 250px;
+}
 .title {
   background: #014a95;
   text-align: center;
@@ -80,45 +130,26 @@ export default {
 
 .container {
   width: 250px;
-  float: left;
   margin-top: 10px;
 }
 .list {
   width: 250px;
-  margin: 10px auto;
   background-color: #d9e9fa;
   font-size: 14px;
 }
 
 .list ul li {
   border-bottom: solid 1px #ffffff;
-  list-style: none;
 }
 
-.list ul li span {
-  float: right;
-  margin-right: 30px;
-  color: #000000;
-}
-
-.list ul li a {
-  padding-left: 10px;
+.list ul li {
+  text-align: left;
   color: #000000;
   display: block;
-  height: 36px;
   line-height: 36px;
   position: relative;
   text-decoration: none;
   color: #003870;
-}
-
-.list ul li ul {
-  display: none;
-  background-color: #e5f2ff;
-}
-
-.list ul li ul li {
-  border-left: 0;
-  border-right: 0;
+  display: list-item;
 }
 </style>

@@ -35,6 +35,42 @@ const routes = [{
             component: () =>
                 import ('@/views/AchievementsAppraisal'),
             name: 'AchievementsAppraisal',
+        },
+        {
+            path: '/MoralEducation',
+            component: () =>
+                import ('@/views/MoralEducation'),
+            name: 'MoralEducation',
+        },
+        {
+            path: '/TeachingResources',
+            component: () =>
+                import ('@/views/TeachingResources'),
+            name: 'TeachingResources',
+        },
+        {
+            path: '/DevelopEffective',
+            component: () =>
+                import ('@/views/DevelopEffective'),
+            name: 'DevelopEffective',
+        },
+        {
+            path: '/InnovationActivities',
+            component: () =>
+                import ('@/views/InnovationActivities'),
+            name: 'InnovationActivities',
+        },
+        {
+            path: '/SummaryReport',
+            component: () =>
+                import ('@/views/SummaryReport'),
+            name: 'SummaryReport',
+        },
+        {
+            path: '/OtherPages',
+            component: () =>
+                import ('@/views/OtherPages'),
+            name: 'OtherPages',
         }
     ]
 }, ]

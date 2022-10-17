@@ -1,26 +1,23 @@
 <!--
  * @Author: lucas-se 1320467676@qq.com
- * @Date: 2022-10-16 23:12:22
+ * @Date: 2022-10-17 17:23:07
  * @LastEditors: lucas-se 1320467676@qq.com
- * @LastEditTime: 2022-10-17 21:19:51
- * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/AchievementsAppraisal.vue
+ * @LastEditTime: 2022-10-17 19:29:20
+ * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/components/curPosition.vue
  * @Description: 
  * 
  * Copyright (c) 2022 by lucas-se 1320467676@qq.com, All Rights Reserved. 
 -->
 <template>
-  <div class="content">
-    <div class="content">
-      <el-container>
-        <el-aside width="280px">
-          <MenuList :title="title" :menu="menu" @changePath="changePath">
-          </MenuList>
-        </el-aside>
-        <el-main>
-          <curPosition :path="path" />
-          <MainContent />
-        </el-main>
-      </el-container>
+  <div class="container">
+    <div class="midcd">
+      <div>
+        当前位置:
+        <span @click="pushRouter('HomePage')">首页</span>
+        <span v-for="(item, index) of path" :key="index">
+          &gt;&gt;{{ item }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -29,15 +26,19 @@
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 
 export default {
-  name: 'AchievementsAppraisal',
+  name: 'curPosition',
   components: {},
   // 定义属性
   data() {
-    return {
-      title: '成果鉴定',
-      menu: [],
-      path: [],
-    }
+    return {}
+  },
+  props: {
+    path: {
+      type: Array,
+      default: function () {
+        return []
+      },
+    },
   },
   // 计算属性，会监听依赖属性值随之变化
   computed: {},
@@ -45,9 +46,8 @@ export default {
   watch: {},
   // 方法集合
   methods: {
-    changePath(path) {
-      this.path = path
-      console.log(path)
+    pushRouter(to) {
+      this.$router.push(to)
     },
   },
   // 生命周期 - 创建完成（可以访问当前this实例）
@@ -65,17 +65,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content {
-  width: 1000px;
-  margin: 0 auto;
-  overflow: hidden;
-  .el-main {
-    width: 720px;
-    min-height: 400px;
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 0 10px 10px 10px;
-    margin-top: 10px;
-  }
+.midcd {
+  text-align: left;
+  line-height: 30px;
+  font-size: 12px;
+  border-bottom: 1px solid #0290e1;
+}
+
+.midcd span {
+  color: #000000;
+  text-decoration: none;
 }
 </style>

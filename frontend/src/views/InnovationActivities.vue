@@ -1,10 +1,10 @@
 <!--
  * @Author: lucas-se 1320467676@qq.com
- * @Date: 2022-10-15 21:14:07
+ * @Date: 2022-10-17 12:45:39
  * @LastEditors: lucas-se 1320467676@qq.com
- * @LastEditTime: 2022-10-17 21:19:46
- * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/ApplicationForm.vue
- * @Description: 这里是成果申请书模块
+ * @LastEditTime: 2022-10-17 21:19:35
+ * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/InnovationActivities.vue
+ * @Description: 
  * 
  * Copyright (c) 2022 by lucas-se 1320467676@qq.com, All Rights Reserved. 
 -->
@@ -29,42 +29,42 @@
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 
 export default {
-  name: 'ApplicationForm',
+  name: 'InnovationActivities',
   components: {},
   // 定义属性
   data() {
     return {
-      title: '成果总结报告',
       path: [],
+      title: '创新活动',
       menu: [
         {
           id: 1,
-          content: '成果获奖情况',
+          content: '学科竞赛',
           showSub: false,
         },
         {
           id: 2,
-          content: '解决的关键问题',
+          content: '创新创业',
           showSub: false,
         },
         {
           id: 3,
-          content: '方法与措施',
+          content: '科技立项',
           showSub: false,
         },
         {
           id: 4,
-          content: '成果特色',
+          content: '学生发表论文',
           showSub: false,
         },
         {
           id: 5,
-          content: '成果推广应用',
+          content: '学生参与专利',
           showSub: false,
         },
         {
           id: 6,
-          content: '完成人',
+          content: '学生代表性作品',
           showSub: false,
         },
       ],

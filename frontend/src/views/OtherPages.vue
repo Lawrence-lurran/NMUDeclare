@@ -1,71 +1,79 @@
 <!--
  * @Author: lucas-se 1320467676@qq.com
- * @Date: 2022-10-15 21:14:07
+ * @Date: 2022-10-17 12:45:39
  * @LastEditors: lucas-se 1320467676@qq.com
- * @LastEditTime: 2022-10-17 21:19:46
- * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/ApplicationForm.vue
- * @Description: 这里是成果申请书模块
+ * @LastEditTime: 2022-10-17 20:32:49
+ * @FilePath: /NUMDeclare/NMUDeclare/frontend/src/views/OtherPages.vue
+ * @Description: 
  * 
  * Copyright (c) 2022 by lucas-se 1320467676@qq.com, All Rights Reserved. 
 -->
 <template>
   <div class="content">
-    <div class="content">
-      <el-container>
-        <el-aside width="280px">
-          <MenuList :title="title" :menu="menu" @changePath="changePath">
-          </MenuList>
-        </el-aside>
-        <el-main>
-          <curPosition :path="path" />
-          <MainContent />
-        </el-main>
-      </el-container>
-    </div>
+    <el-container>
+      <el-aside width="280px">
+        <MenuList :title="title" :menu="menu" @changePath="changePath">
+        </MenuList
+      ></el-aside>
+      <el-main>
+        <curPosition :path="path" />
+        <MainContent />
+      </el-main>
+    </el-container>
   </div>
 </template>
 
 <script>
 // 这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
-
+import curPosition from '@/components/curPosition.vue'
+import MainContent from './MainContent'
 export default {
-  name: 'ApplicationForm',
-  components: {},
+  name: 'OtherPages',
+  components: { curPosition, MainContent },
   // 定义属性
   data() {
     return {
-      title: '成果总结报告',
-      path: [],
+      title: '教学资源',
+      path: ['教学资源', '师资介绍'],
       menu: [
         {
           id: 1,
-          content: '成果获奖情况',
+          content: '师资介绍',
           showSub: false,
+          children: [
+            { id: 1, content: '师资组成' },
+            { id: 2, content: '教学团队' },
+          ],
         },
         {
           id: 2,
-          content: '解决的关键问题',
+          content: '课程建设',
           showSub: false,
+          children: [
+            { id: 1, content: '出版教材' },
+            { id: 2, content: '精品课程' },
+            { id: 3, content: '视频教学' },
+          ],
         },
         {
           id: 3,
-          content: '方法与措施',
+          content: '实验平台',
           showSub: false,
+          children: [
+            { id: 1, content: '实验室基本情况' },
+            { id: 2, content: '虚拟仿真实验室' },
+            { id: 3, content: '开发实验室预约' },
+          ],
         },
         {
           id: 4,
-          content: '成果特色',
+          content: '教科协同',
           showSub: false,
-        },
-        {
-          id: 5,
-          content: '成果推广应用',
-          showSub: false,
-        },
-        {
-          id: 6,
-          content: '完成人',
-          showSub: false,
+          children: [
+            { id: 1, content: '教研平台' },
+            { id: 2, content: '教改成果' },
+            { id: 3, content: '科研成果' },
+          ],
         },
       ],
     }
@@ -84,7 +92,15 @@ export default {
   // 生命周期 - 创建完成（可以访问当前this实例）
   created() {},
   // 生命周期 - 挂载完成（可以访问DOM元素）
-  mounted() {},
+  mounted() {
+    console.log(this.$route)
+    this.$store.dispatch('GET_MENU', this.$route.name).then((data) => {
+      console.log(data)
+      this.title = data.title
+      this.menu = data.menu
+      console.log('otherPage')
+    })
+  },
   beforeCreate() {}, // 生命周期 - 创建之前
   beforeMount() {}, // 生命周期 - 挂载之前
   beforeUpdate() {}, // 生命周期 - 更新之前
