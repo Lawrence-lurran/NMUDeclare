@@ -17,7 +17,7 @@
         </div>
         <div class="mid11-content">
           <div class="cycle-img">
-            <img :src="cycle_imgs[0].src" ref="cycle_img" @click="handleClickImg" />
+            <img :src="cycle_imgs[0].src" ref="cycle_img" @click="handleClickCycleImg" />
             <div class="cycle-img-btns">
               <div class="cycle-img-btn" :ref="'cycle-img-btn' + item.id" v-for="item in cycle_imgs" :key="item.id" @click="changeImg(item.id)">
                 {{ item.id }}
@@ -33,7 +33,7 @@
         <div class="mid12-content">
           <ul>
             <li v-for="item in innovations" :key="item.title">
-              <a :href="item.href" :title="item.title" target="_blank">{{ item.title }}</a>
+              <a :href="item.link" :title="item.title">{{ item.title }}</a>
             </li>
           </ul>
         </div>
@@ -43,12 +43,17 @@
       <div class="mid2-title">
         <span>成果简介</span>
       </div>
-      <div class="mid2-content">
-        <p>{{ result_summary1 }}</p>
-        <p v-html="result_summary2"></p>
-      </div>
+      <div class="mid2-content" v-html="result_summary"></div>
     </div>
     <div class="mid3">
+      <div class="mid32" v-for="item in bannerImgs" :key="item.id">
+        <a :href="item.link" target="_blank">
+          <img :src="item.src" style="width: 100%; height: 100%" />
+        </a>
+      </div>
+    </div>
+    <!-- 播放视频 -->
+    <!-- <div class="mid3">
       <div class="mid31" style="background: #000000 !important">
         <video poster="~../assets/video_poster.jpg" width="340px" height="380px" src="~../assets/video.mp4" controls="controls">
           <source src="~../assets/video.mp4" type="video/mp4" />
@@ -60,9 +65,16 @@
           <img src="~../assets/online_call.jpg" />
         </a>
       </div>
-    </div>
+    </div> -->
     <div class="mid4">
       <div class="mid4-title">代表性成果</div>
+      <div class="mid4-content">
+        <div class="mid4-content-imgs" ref="mid4-content-imgs">
+          <div class="mid4-img" v-for="item in scrollImgs" :key="'scroll' + item.id">
+            <img :src="item.src" @click="handdleClickScrollImg(item.link)" />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -74,6 +86,10 @@ import cycle2 from '@/assets/cycle2.jpg';
 import cycle3 from '@/assets/cycle3.jpg';
 import cycle4 from '@/assets/cycle4.jpg';
 import cycle5 from '@/assets/cycle5.jpg';
+import banner1 from '@/assets/banner1.png';
+import banner2 from '@/assets/banner2.png';
+import banner3 from '@/assets/banner3.png';
+import banner4 from '@/assets/banner4.jpg';
 
 export default {
   name: 'HomePage',
@@ -81,24 +97,52 @@ export default {
   // 定义属性
   data() {
     return {
-      result_summary1: `信息安全是国家安全的重要组成部分，习近平总书记指出我国信息安全要“战略清晰，技术先进，产业领先，攻防兼备”，并明确指出：“网络空间的竞争，归根结底是人才的竞争。建设网络强国，没有一支优秀的人才队伍，没有人才创造力迸发，活力涌流，是难以成功的。”西安邮电大学作为西北地区唯一一所以邮电通信技术为特色的高等院校，始终以国家信息安全战略需求为导向，从2004年就开始了信息安全专业招生和人才培养工作，累计培养毕业生1000余人。`,
-      result_summary2: `我们秉承<strong>“德育引领，创新驱动，面向行业”</strong>的人才培养理念，信息安全人才培养面向地方信息化建设和信息通信行业需求，围绕中国特色网络安全观，通过理念、队伍、体系、内容、措施等方面的创新构建了“12345”德育教育体系；立足国家网络强国战略，通过目标、队伍、途径、平台、措施等方面的创新实施了“12345”创新教育体系；针对行业和地方需求，通过定位、特色、模块、主线、措施等方面的创新制定了“12345”特色人才培养体系，形成了“三位一体”的人才培养模式，注重学生德育教育、创新能力与攻防兼备能力的培养，信息安全特色人才培养成效显著，具有良好应用效果和示范效应。`,
       // 德育专栏
       cycle_imgs: [
-        { id: 1, src: cycle1, link: '/AchievementsAppraisal' },
-        { id: 2, src: cycle2, link: '/AchievementsAppraisal' },
-        { id: 3, src: cycle3, link: '/AchievementsAppraisal' },
-        { id: 4, src: cycle4, link: '/AchievementsAppraisal' },
-        { id: 5, src: cycle5, link: '/AchievementsAppraisal' },
+        { id: 1, src: cycle1, link: '/MoralEducation' },
+        { id: 2, src: cycle2, link: '/MoralEducation' },
+        { id: 3, src: cycle3, link: '/MoralEducation' },
+        { id: 4, src: cycle4, link: '/MoralEducation' },
+        { id: 5, src: cycle5, link: '/MoralEducation' },
       ],
       cycle_img_order: 0,
       timer: null,
       // 创新专栏
       innovations: [
-        { href: 'http://aqjxcg.xupt.edu.cn/cxhd1/xkjs.htm', title: '学生创新成果' },
-        { href: 'http://aqjxcg.xupt.edu.cn/info/1063/1309.htm', title: '创新教育' },
-        { href: 'http://aqjxcg.xupt.edu.cn/info/1063/1316.htm', title: '网络空间安全特长班' },
-        { href: 'http://aqjxcg.xupt.edu.cn/info/1063/1320.htm', title: '组织学科竞赛' },
+        { link: '/InnovationActivities', title: '学生创新成果' },
+        { link: '/InnovationActivities', title: '创新教育' },
+        { link: '/InnovationActivities', title: '网络空间安全特长班' },
+        { link: '/InnovationActivities', title: '组织学科竞赛' },
+      ],
+      // 成果简介
+      result_summary: `<p style="margin:0;">深化<strong>“三全育人”</strong>综合改革是落实立德树人根本任务，建设特色鲜明的高水平现代化综合大学的必然要求。
+      近年来，北方民族大学党委以习近平新时代中国特色社会主义思想为指引，坚持党的全面领导，坚持社会主义办学方向，
+      坚持铸牢中华民族共同体意识工作主线，紧紧围绕<strong>“为谁培养人、培养什么人、怎样培养人”</strong>这个时代课题，以深化“三全育人”综合改革为切入点，
+      聚焦组织领导、体系建构、制度机制、队伍建设、平台载体建设等工作，准确识变、科学应变、主动求变，进行了积极的探索与实践。</p>
+      <p style="margin:0;">踏石留印，抓铁有痕。为忠实记录我们走过的艰苦奋斗历程，我们将近年来学校深化“三全育人”综合改革重点工作进行了归纳整理，
+      按照<strong>“领导关怀、组织领导、制度建设、重要会议、活动实践、工作成效、新闻报道”</strong>等七个版块以时间为轴进行了梳理总结。
+      官微将在近期推出其中部分内容，以展示学校“三全育人”工作阶段性成果。</p>
+      <p style="margin:0;">心之所向，方能行远。北民大人将牢记初心和使命，胸怀“国之大者”，以<strong>更高的政治站位、更坚定的意志、更实的举措</strong>持续深化“三全育人”综合改革，
+      创建铸牢中华民族共同体意识示范校，推动学校实现高质量发展。</p>`,
+      // 右侧四张图
+      bannerImgs: [
+        { id: 1, src: banner1, link: 'https://www.nmu.edu.cn/' },
+        { id: 2, src: banner2, link: 'https://www.nmu.edu.cn/' },
+        { id: 3, src: banner3, link: 'https://www.nmu.edu.cn/' },
+        { id: 4, src: banner4, link: 'https://www.nmu.edu.cn/' },
+      ],
+      // 滚动图
+      scrollImgs: [
+        { id: 1, src: cycle1, link: '/AchievementsAppraisal' },
+        { id: 2, src: cycle2, link: '/AchievementsAppraisal' },
+        { id: 3, src: cycle3, link: '/AchievementsAppraisal' },
+        { id: 4, src: cycle4, link: '/AchievementsAppraisal' },
+        { id: 5, src: cycle5, link: '/AchievementsAppraisal' },
+        { id: 6, src: cycle1, link: '/AchievementsAppraisal' },
+        { id: 7, src: cycle2, link: '/AchievementsAppraisal' },
+        { id: 8, src: cycle3, link: '/AchievementsAppraisal' },
+        { id: 9, src: cycle4, link: '/AchievementsAppraisal' },
+        { id: 10, src: cycle5, link: '/AchievementsAppraisal' },
       ],
     };
   },
@@ -108,12 +152,14 @@ export default {
   watch: {},
   // 方法集合
   methods: {
+    // 轮播图按钮点击
     changeImg(id) {
       this.cycle_img_order = id - 1;
       this.$refs['cycle_img'].src = this.cycle_imgs[id - 1].src;
 
       this.initialCycleBtnStyle();
     },
+    // 操作轮播图按钮样式
     initialCycleBtnStyle() {
       for (let i = 0; i < this.cycle_imgs.length; i++) {
         this.$refs[`cycle-img-btn${i + 1}`][0].style.background = 'rgb(102,102,102, 0.5)'; // 先把所有按钮的背景色恢复
@@ -121,8 +167,13 @@ export default {
       }
       this.$refs[`cycle-img-btn${this.cycle_img_order + 1}`][0].style.background = 'rgb(241,123,10)'; //这里为什么返回的是一个数组？
     },
-    handleClickImg() {
+    // 轮播图图片点击
+    handleClickCycleImg() {
       const link = this.cycle_imgs[this.cycle_img_order].link;
+      this.$router.push(link);
+    },
+    // 滚动图图片点击
+    handdleClickScrollImg(link) {
       this.$router.push(link);
     },
   },
@@ -130,12 +181,22 @@ export default {
   created() {},
   // 生命周期 - 挂载完成（可以访问DOM元素）
   mounted() {
+    // 轮播图
     this.timer = setInterval(() => {
       this.cycle_img_order = ++this.cycle_img_order < this.cycle_imgs.length ? this.cycle_img_order : 0;
       this.$refs['cycle_img'].src = this.cycle_imgs[this.cycle_img_order].src;
 
       this.initialCycleBtnStyle(); //
     }, 5000);
+
+    // // 代表性成果——图片滚动
+    // let a = this.$refs['mid4-content-imgs'];
+    // let left = 0;
+    // setInterval(() => {
+    //   a.style.marginLeft = left + 'px';
+    //   left -= 10;
+    //   console.log(left);
+    // }, 500);
   },
   beforeCreate() {}, // 生命周期 - 创建之前
   beforeMount() {}, // 生命周期 - 挂载之前
@@ -304,12 +365,8 @@ export default {
   margin-top: 10px;
   margin-left: 10px;
 
-  .mid31 {
-    // border-radius: 10px;
-  }
   .mid32 {
-    margin-top: 10px;
-    border-radius: 10px;
+    height: 117px;
   }
 }
 .mid4 {
@@ -329,6 +386,66 @@ export default {
     border-bottom: 2px solid #0290e1;
   }
   .mid4-content {
+    height: 200px;
+    width: 100%;
+    position: relative;
+
+    .mid4-content-imgs {
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      animation: mymove 20s infinite;
+      -webkit-animation: mymove 20s infinite; /*Safari and Chrome*/
+
+      .mid4-img {
+        width: 140px;
+        height: 180px;
+        margin: 10px 0 0 10px;
+
+        background: red;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        img:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    // 动画
+    @keyframes mymove {
+      0% {
+        left: 0;
+        transform: translate(0, -50%);
+      }
+      50% {
+        left: 100%;
+        transform: translate(-100%, -50%);
+      }
+      100% {
+        left: 0;
+        transform: translate(0, -50%);
+      }
+    }
+    @-webkit-keyframes mymove /*Safari and Chrome*/ {
+      0% {
+        left: 0;
+        transform: translate(0, -50%);
+      }
+      50% {
+        left: 100%;
+        transform: translate(-100%, -50%);
+      }
+      100% {
+        left: 0;
+        transform: translate(0, -50%);
+      }
+    }
   }
 }
 </style>

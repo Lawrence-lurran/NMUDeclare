@@ -19,27 +19,19 @@
             成果申请书
             <ul class="second-nav">
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/cghjqk.htm"
-                  >成果获奖情况</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/cghjqk.htm">成果获奖情况</a>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/cgjjjjjdgjwt.htm"
-                  >解决的关键问题</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/cgjjjjjdgjwt.htm">解决的关键问题</a>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/ffycs.htm"
-                  >方法与措施</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/ffycs.htm">方法与措施</a>
               </li>
               <li>
                 <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/cgts.htm">成果特色</a>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/cgtgyy.htm"
-                  >成果推广应用</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/cgtgyy.htm">成果推广应用</a>
               </li>
               <li>
                 <a href="http://aqjxcg.xupt.edu.cn/cgsqs1/wcr.htm">完成人</a>
@@ -52,29 +44,19 @@
             德育园地
             <ul class="second-nav">
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/dyyd/bwcx_ljsm.htm"
-                  >不忘初心，牢记使命</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/dyyd/bwcx_ljsm.htm">不忘初心，牢记使命</a>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/dyyd/dyjykctx.htm"
-                  >德育教育课程体系</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/dyyd/dyjykctx.htm">德育教育课程体系</a>
               </li>
               <li>
-                <a href="http://wlaqz.xupt.edu.cn/" target="_blank"
-                  >网络安全宣传周</a
-                >
+                <a href="http://wlaqz.xupt.edu.cn/" target="_blank">网络安全宣传周</a>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/dyyd/dygzz1.htm"
-                  >党员工作站</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/dyyd/dygzz1.htm">党员工作站</a>
               </li>
               <li>
-                <a href="http://wlaqz.xupt.edu.cn/gzzd.htm" target="_blank"
-                  >职业规范教育</a
-                >
+                <a href="http://wlaqz.xupt.edu.cn/gzzd.htm" target="_blank">职业规范教育</a>
               </li>
             </ul>
           </li>
@@ -91,19 +73,13 @@
                 <a href="http://aqjxcg.xupt.edu.cn/cxhd1/kjlx.htm">科技立项</a>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/cxhd1/kjlx1.htm"
-                  >学生发表论文</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/cxhd1/kjlx1.htm">学生发表论文</a>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/cxhd1/kjlx2.htm"
-                  >学生参与专利</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/cxhd1/kjlx2.htm">学生参与专利</a>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/cxhd1/kjlx3.htm"
-                  >学生代表性作品</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/cxhd1/kjlx3.htm">学生代表性作品</a>
               </li>
             </ul>
           </li>
@@ -111,85 +87,55 @@
             教学资源
             <ul class="second-nav">
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/jxzy/szjs/szzc.htm"
-                  >师资介绍</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/jxzy/szjs/szzc.htm">师资介绍</a>
                 <ul class="third-nav">
                   <li>
-                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/szjs/szzc.htm"
-                      >师资组成</a
-                    >
+                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/szjs/szzc.htm">师资组成</a>
                   </li>
                   <li>
-                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/szjs/jxtd.htm"
-                      >教学团队</a
-                    >
+                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/szjs/jxtd.htm">教学团队</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/jxzy/kcjs1/jc.htm"
-                  >课程建设</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/jxzy/kcjs1/jc.htm">课程建设</a>
                 <ul class="third-nav">
                   <li>
-                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/kcjs1/jc.htm"
-                      >出版教材</a
-                    >
+                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/kcjs1/jc.htm">出版教材</a>
                   </li>
                   <li>
-                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/kcjs1/jpkc.htm"
-                      >精品课程</a
-                    >
+                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/kcjs1/jpkc.htm">精品课程</a>
                   </li>
                   <li>
-                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/kcjs1/spjx.htm"
-                      >视频教学</a
-                    >
+                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/kcjs1/spjx.htm">视频教学</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/jxzy/sypt/sysjbqk.htm"
-                  >实验平台</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/jxzy/sypt/sysjbqk.htm">实验平台</a>
                 <ul class="third-nav">
                   <li>
-                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/sypt/sysjbqk.htm"
-                      >实验室基本情况</a
-                    >
+                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/sypt/sysjbqk.htm">实验室基本情况</a>
                   </li>
                   <li>
-                    <a href="http://tg.xiyou.edu.cn/virexp/" target="_blank"
-                      >虚拟仿真实验室</a
-                    >
+                    <a href="http://tg.xiyou.edu.cn/virexp/" target="_blank">虚拟仿真实验室</a>
                   </li>
                   <li>
-                    <a href="http://222.24.62.75/labproc/" target="_blank"
-                      >开放实验预约</a
-                    >
+                    <a href="http://222.24.62.75/labproc/" target="_blank">开放实验预约</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/jxzy/jkxt/jgcg.htm"
-                  >教科协同</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/jxzy/jkxt/jgcg.htm">教科协同</a>
                 <ul class="third-nav">
                   <li>
-                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/jkxt/kypt.htm"
-                      >教研平台</a
-                    >
+                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/jkxt/kypt.htm">教研平台</a>
                   </li>
                   <li>
-                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/jkxt/jgcg.htm"
-                      >教改成果</a
-                    >
+                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/jkxt/jgcg.htm">教改成果</a>
                   </li>
                   <li>
-                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/jkxt/kycg.htm"
-                      >科研成果</a
-                    >
+                    <a href="http://aqjxcg.xupt.edu.cn/jxzy/jkxt/kycg.htm">科研成果</a>
                   </li>
                 </ul>
               </li>
@@ -202,9 +148,7 @@
                 <a href="http://aqjxcg.xupt.edu.cn/pycx/jyqk.htm">招生就业</a>
               </li>
               <li>
-                <a href="http://aqjxcg.xupt.edu.cn/pycx/qypj.htm"
-                  >主办会议与竞赛</a
-                >
+                <a href="http://aqjxcg.xupt.edu.cn/pycx/qypj.htm">主办会议与竞赛</a>
               </li>
               <li>
                 <a href="http://aqjxcg.xupt.edu.cn/pycx/shyx.htm">社会影响</a>
@@ -221,8 +165,7 @@
     <footer>
       <div class="fot">
         <p>
-          CopyRight © 2022 All Rights
-          Reserved.北方民族大学高等教育国家级教学成果奖申报网站 版权所有<br />地址：宁夏回族自治区-银川市-西夏区-文昌北街204号
+          CopyRight © 2022 All Rights Reserved.北方民族大学高等教育国家级教学成果奖申报网站 版权所有<br />地址：宁夏回族自治区-银川市-西夏区-文昌北街204号
           电话：0951-2066992 技术支持：swjtu-vge
         </p>
       </div>
@@ -240,7 +183,7 @@ export default {
   data() {
     return {
       to: 'HomePage',
-    }
+    };
   },
   // 计算属性，会监听依赖属性值随之变化
   computed: {},
@@ -250,8 +193,8 @@ export default {
   methods: {
     pushRouter(to) {
       if (this.to !== to) {
-        this.to = to
-        this.$router.push(to)
+        this.to = to;
+        this.$router.push(to);
       }
     },
   },
@@ -266,7 +209,7 @@ export default {
   beforeDestroy() {}, // 生命周期 - 销毁之前
   destroyed() {}, // 生命周期 - 销毁完成
   activated() {}, // 如果页面有keep-alive缓存功能，这个函数会触发
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -344,6 +287,10 @@ export default {
     .third-nav li {
       width: 118px !important;
       padding: 0 !important;
+    }
+    li:hover {
+      cursor: pointer;
+      color: #fd8005;
     }
   }
   .fot {

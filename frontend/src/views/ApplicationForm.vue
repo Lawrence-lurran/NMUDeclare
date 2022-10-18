@@ -33,7 +33,7 @@ export default {
   // 定义属性
   data() {
     return {
-      title: '成果总结报告',
+      title: '成果申请书',
       path: [],
       menu: [
         {
